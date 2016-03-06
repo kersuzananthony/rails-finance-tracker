@@ -10,6 +10,8 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 # gem devise bootstrap-views
 gem 'devise-bootstrap-views'
+# Stock quote gem
+gem 'stock_quote'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
