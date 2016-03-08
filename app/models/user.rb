@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   # Relationship
   has_many :user_stocks
   has_many :stocks, through: :user_stocks
+  has_many :friendships
+  has_many :friends, through: :friendships
 
   # User can add a stock only if he did not overreach the limit and if stock has not been added yet
   def can_add_stock?(ticker_symbol)
