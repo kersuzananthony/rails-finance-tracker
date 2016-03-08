@@ -1,1 +1,11 @@
-<h1>My friends</h1>
+<%= render 'friends/lookup' %>
+
+<% if @friendships.size > 0 %>
+  <%= render 'friends/list' %>
+<% else %>
+  <div class="row col-lg-12">
+    <div class="lead">
+      You don't have any friends yet. Please add some!
+    </div>
+  </div>
+<% end %>
