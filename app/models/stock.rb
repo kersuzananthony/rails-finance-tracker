@@ -1,5 +1,9 @@
 class Stock < ActiveRecord::Base
 
+  # Relationship
+  has_many :user_stocks
+  has_many :users, through: :user_stocks
+
   def self.new_from_lookup(ticker_symbol)
     # Use stock_quote gem to get stock info
     look_up_stock = StockQuote::Stock.quote(ticker_symbol)
